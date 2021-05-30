@@ -5,10 +5,10 @@ CMD="$1"
 
 case "$CMD" in
   "init")
-    cat "$(pwd)"/../sql/testData.sql | docker exec -i -e MYSQL_PWD=password songs-db mysql --default-character-set=utf8 --host=127.0.0.1 --database=testdb --user=user
+    cat "$(pwd)"/../sql/testData.sql | docker exec -i -e MYSQL_PWD=password songs-db mysql --default-character-set=utf8 --host=127.0.0.1 --database=songsdb --user=user
     ;;
    "clear")
-    cat "$(pwd)"/../sql/clearData.sql | docker exec -i -e MYSQL_PWD=password songs-db mysql --default-character-set=utf8 --host=127.0.0.1 --database=testdb --user=user
+    cat "$(pwd)"/../sql/clearData.sql | docker exec -i -e MYSQL_PWD=password songs-db mysql --default-character-set=utf8 --host=127.0.0.1 --database=songsdb --user=user
     ;;
   "start")
     docker-compose -f ./docker/docker-compose.yml up -d

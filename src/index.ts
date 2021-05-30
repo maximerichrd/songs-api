@@ -1,21 +1,15 @@
-import { knex } from "./knex/knex"
+import * as E from "fp-ts/Either"
+import { pipe } from 'fp-ts/lib/pipeable'
+import { knex } from './knex/knex'
+import { PlaylistReaderImpl } from "./persistence/playlists/PlaylistReader"
 
-interface Song {
-    name: string
-    author: string
-    duration: number
-}
+PlaylistReaderImpl(knex).findOne(1, 5)().then((eitherPlaylist) =>
+    pipe(
+        eitherPlaylist,
+        E.fold(
+            (error) => console.log(error),
+            (playlist) => console.log(playlist)
+        )
+    )
+)
 
-const firstSong = {
-    name: "The dock of the bay",
-    author: "Ottis Redding",
-    duration: 3.30
-} as Song
-
-const displaySongs = (songs: Song[]):void  => {
-    songs.forEach((
-        {name, author, duration}, i) => 
-            console.log(`song #${i + 1}: \n ${name} \n ${author} \n ${duration}`))
-}
-
-displaySongs([firstSong])

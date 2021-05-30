@@ -12,6 +12,6 @@ services:
        MYSQL_USER: user
        MYSQL_PASSWORD: password
        MYSQL_ROOT_PASSWORD: password
-       MYSQL_DATABASE: songs-db
+       MYSQL_DATABASE: songsdb
     ports:
       - "6606:3306"
