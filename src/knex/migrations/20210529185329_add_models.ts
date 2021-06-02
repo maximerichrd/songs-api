@@ -1,4 +1,4 @@
-import { Knex } from "knex";
+import Knex from "knex";
 
 const songsNameIndex = "songs_name_index"
 const usersNameIndex = "users_name_index"

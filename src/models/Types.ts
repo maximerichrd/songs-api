@@ -6,6 +6,16 @@ export type Song = {
     id: number
 }
 
+export type SongT = {
+    name: string
+    author: string
+    duration: number
+    description: string
+    song_id: number
+}
+
+
+
 export type User = {
     id: number
     lastname: string
@@ -33,4 +43,6 @@ export type Playlist = {
 
 export type DescriptionTranslation = {
     value: string
+    lang: string
+    song_id: number
 }

@@ -75,10 +75,10 @@ INSERT INTO song_playlist (song_index, song_id, playlist_id)
 # translations
 INSERT INTO description_translations (id, song_id, lang, value)
         VALUES
-        (1, 10001, 'en', "Wonderful song about Paris, cult !"),
+        (1, 10001, 'it', "Un merviglioso canzon su Parigi, bellissima ! "),
         (2, 10002, 'en', "Nocturne with subtil harmony changes"),
         (3, 10001, 'ger', "Ein wunderbares Lied über Paris, kult !"),
-        (4, 10001, 'it', "Un merviglioso canzon su Parigi, bellissima ! "),
+        (4, 10001, 'en', "Wonderful song about Paris, cult !"),
         (5, 10002, 'ger', "Ein Nokturn mit ausgezeichneten Harmonisierungen"),
         (6, 10002, 'it', "Un nocturno con le piu suttile harmonie"),
         (7, 10003, 'en', 'An adagio cantabile written in 1791'),
@@ -89,4 +89,5 @@ INSERT INTO description_translations (id, song_id, lang, value)
         (12, 10004, 'it', 'Con le parole di ottima qualita'),
         (13, 10005, 'en', 'A song that became an emblem of the art of living in Marseille'),
         (14, 10021, 'en', 'Anita at its best'),
+        (16, 10009, 'it', 'Una merviglia dello magnissimo Trenet'),
         (15, 10081, 'en', 'A marvelous rythm and voice');
